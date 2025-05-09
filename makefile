@@ -8,7 +8,7 @@ all: $(TARGETS)
 jacobi_mpi: jacobi3d.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-jacobi_hybrid_task: mpipuldhybrid.c
+jacobi_hybrid_task: mpipulshybrid.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 reduction_nonblocking: manualmpi.c
@@ -29,3 +29,5 @@ run: all
 
 clean:
 	rm -f $(TARGETS)
+
+.PHONY: all run clean
